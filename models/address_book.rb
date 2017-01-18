@@ -21,7 +21,7 @@ class AddressBook
     entries.insert(index, Entry.new(name, phone_number, email))
    end
 
-   def import_from_csv(file_name)
+  def import_from_csv(file_name)
     # We start out by reading the file and storing it 
     # in the 'csv_text' variable.
     csv_text = File.read(file_name)
@@ -36,7 +36,10 @@ class AddressBook
       # Finally, we add the new row_hash as an entry to our AddressBook.
       add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
     end
-   end
+  end
 
+  # Search AddressBook for a specific entry by name
+  def binary_search(name)
+  end
 
 end
