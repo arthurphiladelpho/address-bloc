@@ -133,7 +133,7 @@ RSpec.describe AddressBook do
     it "searches AddressBook for Sussie" do
       book.import_from_csv("entries.csv")
       entry = book.binary_search("Sussie")
-      expect(entry).to belong_a Entry
+      expect(entry).to be_a Entry
       check_entry(entry, "Sussie", "555-555-2036", "sussie@blocmail.com")
     end
     it "searches AddressBook for Billy" do
