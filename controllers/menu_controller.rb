@@ -196,4 +196,11 @@ class MenuController
     end
   end
 
+  def relinquish 
+    address_book.entries.each do |i|
+    delete_entry(i)  
+    end
+    puts "All entries where relinquished."
+  end
+
 end # of MenuController class.
