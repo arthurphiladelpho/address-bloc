@@ -78,7 +78,18 @@ class AddressBook
     # If we divide and conquer to the point where no match is found
     # we then return nil.
     return nil
+  end # end of the binary search method
 
+  def iterative_search(name)
+    #loop over array
+    entries.each do |i|
+      #if name == to entries[index].name return it
+      if name == i.name
+        return i
+      end
+    end
+      #else return nil
+      return nil
   end
 
 end
